@@ -1,0 +1,17 @@
+#Linux cache
+.bash_history
+.bash_logout
+.bash_profile
+.bashrc
+
+
+#django cache
+venv/
+db.sqlite3
+*.log
+__pycache__/
+
+
+#docker cache
+whereto/Dockerfile
+whereto/uwsgi.ini
