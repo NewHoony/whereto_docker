@@ -1,0 +1,43 @@
+version: '3.7'
+services:
+
+    nginx:
+        container_name: nginx
+        build: ./nginx
+        image: whereto/nginx:v1
+        restart: always
+        network_mode: "host"
+        ports:
+          - "80:80"
+        volumes:
+          - ./whereto:/home/hoon/whereto
+          - ./log:/var/log/nginx
+          - ./whereto/static/:/home/hoon/whereto/static
+        depends_on:
+          - django
+    django:
+        container_name: django
+        build: ./whereto
+        image: whereto/django:v1
+        restart: always
+        command: uwsgi --ini uwsgi.ini
+        volumes:
+          - ./whereto:/home/hoon/whereto
+          - ./log:/var/log/uwsgi
+        depends_on:
+          - database
+    database:
+        image: mysql:5.7
+        container_name: mysql
+        restart: always
+        ports:
+          - "3306:3306"
+        environment:
+          - MYSQL_ROOT_PASSWORD=1
+          - MYSQL_DATABASE=devdb
+        volumes:
+          - ./database/mysql_data:/var/lib/mysql
+        command:
+          - --character-set-server=utf8mb4
+          - --collation-server=utf8mb4_unicode_ci
+
