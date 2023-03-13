@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block con %}
+
+<main>
+
+  <section class="container-fluid">
+      <div class="container text-center" style="padding-top: 125px; font-size: 50px;">
+        <p>Git Build Test</p>
+        <p>Whereto Develpo Page</p>
+        <form action="https://www.google.com/search" method="GET">
+          <div class="mx-auto mt-5 search-bar input-group mb-3" style="width: 300px;">
+            <input name="q" type="text" class="form-control rounded-pill text-center" placeholder="Enter to search" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+            </div>
+          </div>
+        </form>
+
+      </div>
+
+  </section>
+</main>
+<div style="padding-top: 15px; padding-left: 100px;">
+  <h5>✨Reliable restaurant</h5>
+</div>
+    <!-- Swiper -->
+    <div class="swiper mySwiper" style="padding-top: 5px; padding-left: 35px; padding-right: 35px;">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/static/assets/food1.jpg" style="width: 100%; height: 80%;">Restaurant</div>
+        <div class="swiper-slide"><img src="/static/assets/food2.jpg" style="width: 100%; height: 80%;">Restaurant</div>
+        <div class="swiper-slide"><img src="/static/assets/food3.jpg" style="width: 100%; height: 80%;">Restaurant</div>
+        <div class="swiper-slide"><img src="/static/assets/food4.jpg" style="width: 100%; height: 80%;">Restaurant</div>
+        <div class="swiper-slide"><img src="/static/assets/food5.jpg" style="width: 100%; height: 80%;">Restaurant</div>
+        <div class="swiper-slide"><img src="/static/assets/food6.jpg" style="width: 100%; height: 80%;">Restaurant</div>
+        <div class="swiper-slide"><img src="/static/assets/food7.jpg" style="width: 100%; height: 80%;">Restaurant</div>
+        <div class="swiper-slide"><img src="/static/assets/food8.jpg" style="width: 100%; height: 80%;">Restaurant</div>
+        <div class="swiper-slide"><img src="/static/assets/food9.jpg" style="width: 100%; height: 80%;">Restaurant</div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div><hr>
+
+<div style="padding-top: 15px; padding-left: 100px;">
+      <h5>✨Popular restaurant</h5>
+</div>
+        <!-- Swiper -->
+        <div class="swiper mySwiper" style="padding-top: 5px; padding-left: 35px; padding-right: 35px;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/static/assets/Store1.jpg" style="width: 100%; height: 80%;">Restaurant</div>
+            <div class="swiper-slide"><img src="/static/assets/Store2.jpg" style="width: 100%; height: 80%;">Restaurant</div>
+            <div class="swiper-slide"><img src="/static/assets/store3.jpg" style="width: 100%; height: 80%;">Restaurant</div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+    
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        grid: {
+          rows: 2,
+        },
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+
+
+
+<div style="text-align: center;">
+  <div style="font-size: 1rem;">
+      <span>|Notice|</span>
+      <span>|Affiliation Inquiry|</span>
+      <span>|Introduction|</span>
+  </div>
+  <div style="margin-top: 1rem;">
+      <h6>Whereto</h6>
+  </div>
+</div>
+
+{% endblock %}
