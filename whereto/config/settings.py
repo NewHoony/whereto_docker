@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'devdb',
+        'NAME': 'wheretoDB',
         'USER': 'root',
         'PASSWORD': '1',
         'HOST':'10.1.1.210',
