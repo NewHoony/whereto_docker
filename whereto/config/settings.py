@@ -84,10 +84,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'wheretoDB',
-        'USER': 'root',
-        'PASSWORD': '1',
-        'HOST':'10.1.1.210',
+        'USER': 'admin',
+        'PASSWORD': 'shinpingu1',
+        'HOST':'my-app-rds.cilozx17hjlj.ap-northeast-2.rds.amazonaws.com',
         'PORT': '3306',
+        'OPTIONS':{
+            'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'",
+        }
     },
 }
 
